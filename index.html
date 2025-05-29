@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Merch Shop - Sample</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- You can add a link to a font library like Google Fonts here if desired -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> -->
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <!-- Replace with your university logo or name -->
+                <img src="images/logo.png" alt="University Logo" onerror="this.style.display='none'; this.parentElement.innerHTML = '<h1>University Merch</h1>';">
+                <!-- Fallback text if logo image fails -->
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#products">Shop All</a></li>
+                    <li><a href="#">Apparel</a></li>
+                    <li><a href="#">Accessories</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#" class="cart-icon">🛒 Cart (0)</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Show Your University Pride!</h2>
+            <p>Official merchandise to represent our amazing institution.</p>
+            <a href="#products" class="btn btn-primary">Shop Now</a>
+        </div>
+    </section>
+
+    <main id="products">
+        <div class="container">
+            <h2>Featured Products</h2>
+            <div class="product-grid">
+                <!-- Product Card 1 -->
+                <div class="product-card">
+                    <img src="https://placehold.co/300x300/EFEFEF/AAAAAA&text=University+Hoodie" alt="University Hoodie">
+                    <h3>University Hoodie</h3>
+                    <p class="price">$49.99</p>
+                    <p class="description">Comfortable and stylish premium university hoodie.</p>
+                    <div class="options">
+                        <label for="size-hoodie">Size:</label>
+                        <select id="size-hoodie" name="size-hoodie">
+                            <option value="s">S</option>
+                            <option value="m">M</option>
+                            <option value="l">L</option>
+                            <option value="xl">XL</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-secondary add-to-cart-btn">Add to Cart</button>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="product-card">
+                    <img src="https://placehold.co/300x300/EFEFEF/AAAAAA&text=Classic+T-Shirt" alt="Classic T-Shirt">
+                    <h3>Classic T-Shirt</h3>
+                    <p class="price">$24.99</p>
+                    <p class="description">Soft cotton t-shirt with the university crest.</p>
+                    <div class="options">
+                        <label for="color-tshirt">Color:</label>
+                        <select id="color-tshirt" name="color-tshirt">
+                            <option value="navy">Navy</option>
+                            <option value="grey">Grey</option>
+                            <option value="white">White</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-secondary add-to-cart-btn">Add to Cart</button>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="product-card">
+                    <img src="https://placehold.co/300x300/EFEFEF/AAAAAA&text=Coffee+Mug" alt="Coffee Mug">
+                    <h3>University Coffee Mug</h3>
+                    <p class="price">$15.99</p>
+                    <p class="description">Start your day right with our branded mug.</p>
+                    <button class="btn btn-secondary add-to-cart-btn">Add to Cart</button>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div class="product-card">
+                    <img src="https://placehold.co/300x300/EFEFEF/AAAAAA&text=Campus+Cap" alt="Campus Cap">
+                    <h3>Campus Cap</h3>
+                    <p class="price">$19.99</p>
+                    <p class="description">Adjustable cap, perfect for sunny days.</p>
+                     <button class="btn btn-secondary add-to-cart-btn">Add to Cart</button>
+                </div>
+                 <!-- Add more product cards as needed -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2023 Your University Name. All Rights Reserved.</p>
+            <p>This is a sample website for demonstration purposes.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple script to simulate adding to cart (updates count only)
+        const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+        const cartIcon = document.querySelector('.cart-icon');
+        let cartItemCount = 0;
+
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                cartItemCount++;
+                cartIcon.textContent = `🛒 Cart (${cartItemCount})`;
+                alert('Item added to cart (mock)!'); // Simple feedback
+            });
+        });
+    </script>
+
+</body>
+</html>
